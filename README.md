@@ -1,2 +1,2 @@
-# Programaci-n_3_ApiSlim
+# Programacion_3_ApiSlim
 Segundo Parcial de Programación 3
