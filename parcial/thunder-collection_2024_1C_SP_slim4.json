@@ -1,0 +1,292 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "2024_1C_SP_slim4",
+    "collectionId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+    "dateExported": "2024-07-08T10:21:43.336Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "acbc3e98-231c-469a-9efd-74c0c8bad34c",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "listado usuarios",
+            "url": "http://prog_3_sp/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-08T10:17:37.252Z",
+            "modified": "2024-07-08T10:17:37.252Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "apellido",
+                    "value": "schelotto",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "4ac6b121-c7f5-43ae-9626-38d59d6c2d0b",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "alta juguete",
+            "url": "http://prog_3_sp/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-08T10:17:37.253Z",
+            "modified": "2024-07-08T10:17:37.253Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "juguete_json",
+                        "value": "{\"marca\":\"avion\", \"precio\":\"6500\"}"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\maxin\\OneDrive\\Imágenes\\avion.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b9291686-596d-4c3b-9909-a1269f3c98f3",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "listado juguetes",
+            "url": "http://prog_3_sp/juguetes",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-07-08T10:17:37.254Z",
+            "modified": "2024-07-08T10:17:37.254Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8486ab35-039c-4301-8751-e0053cd21644",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "login - crear jwt",
+            "url": "http://prog_3_sp/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-07-08T10:17:37.255Z",
+            "modified": "2024-07-08T10:17:37.255Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"prop@prop.com\", \"clave\":\"123456\"}"
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"\", \"clave\":\"\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"algo\", \"clave\":\"\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"\", \"clave\":\"123\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"no@existe.com\", \"clave\":\"1234\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"super@super.com \", \"clave\":\"123456\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "user",
+                        "value": "{\"correo\":\"emple@emple.com\", \"clave\":\"123456\"}",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a7c95cfd-5ba0-4f0c-8555-5088e9bb7c68",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "login - verificar jwt",
+            "url": "http://prog_3_sp/login",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-07-08T10:17:37.256Z",
+            "modified": "2024-07-08T10:19:37.109Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        },
+        {
+            "_id": "b9501357-5f55-4375-8761-f11202d64165",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "borrar juguete",
+            "url": "http://prog_3_sp/toys/56",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-07-08T10:17:37.257Z",
+            "modified": "2024-07-08T10:19:56.510Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        },
+        {
+            "_id": "513f29a9-0519-4a70-8656-827d7ecdd5f9",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "modificar juguete",
+            "url": "http://prog_3_sp/toys/",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-07-08T10:17:37.258Z",
+            "modified": "2024-07-08T10:20:10.855Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "juguete",
+                        "value": "{\"id_juguete\":57,\"marca\":\"marca_modif\",\"precio\":666}"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\maxin\\OneDrive\\Imágenes\\auto.png"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        },
+        {
+            "_id": "7bff456d-8e76-411d-8283-104d8553ebab",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "tablas - usuarios",
+            "url": "http://prog_3_sp/tablas/usuarios",
+            "method": "GET",
+            "sortNum": 85000,
+            "created": "2024-07-08T10:17:37.259Z",
+            "modified": "2024-07-08T10:17:37.259Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a4ed4e2f-6d92-44ae-a187-552005a2624e",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "tablas - usuarios - prop",
+            "url": "http://prog_3_sp/tablas/usuarios",
+            "method": "POST",
+            "sortNum": 87500,
+            "created": "2024-07-08T10:17:37.260Z",
+            "modified": "2024-07-08T10:20:33.159Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        },
+        {
+            "_id": "9278d2fd-4fd0-42a5-90d0-1182ec9d855d",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "tablas - juguetes",
+            "url": "http://prog_3_sp/tablas/juguetes",
+            "method": "GET",
+            "sortNum": 88750,
+            "created": "2024-07-08T10:17:37.261Z",
+            "modified": "2024-07-08T10:20:45.453Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        },
+        {
+            "_id": "b121692c-9294-472a-9cb2-f420063229f8",
+            "colId": "66831d3b-7f70-4dc1-a09e-19c9c2e9ba15",
+            "containerId": "",
+            "name": "alta usuarios",
+            "url": "http://prog_3_sp/usuarios",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-07-08T10:17:37.262Z",
+            "modified": "2024-07-08T10:20:58.057Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "usuario",
+                        "value": "{\"correo\":\"juan@fer.co\", \"clave\":\"123456\", \"nombre\":\"juanfer\", \"apellido\":\"quintero\", \"perfil\":\"propietario\"}"
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "{\"correo\":\"\", \"clave\":\"\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "{\"correo\":\"algo\", \"clave\":\"\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "{\"correo\":\"\", \"clave\":\"123\"}",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "{\"correo\":\"prop@prop.com\", \"clave\":\"1234\"}",
+                        "isDisabled": true
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "foto",
+                        "value": "c:\\Users\\maxin\\OneDrive\\Imágenes\\b.jpg"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDExMDI1NDUsImV4cCI6MTcwMTEwMjY2NSwiYXVkIjoie1wiaXBfdmlzaXRhbnRlXCI6XCIxMjcuMC4wLjFcIixcInVzZXJfYWdlbnRcIjpcIlRodW5kZXIgQ2xpZW50IChodHRwczpcXFwvXFxcL3d3dy50aHVuZGVyY2xpZW50LmNvbSlcIixcImhvc3RfbmFtZVwiOlwiTWF4aV9ib29rXCJ9IiwidXN1YXJpbyI6eyJpZCI6MSwiY29ycmVvIjoicHJvcEBwcm9wLmNvbSIsImNsYXZlIjoiMTIzNDU2Iiwibm9tYnJlIjoicHJvcGllIiwiYXBlbGxpZG8iOiJ0YXJpbyIsInBlcmZpbCI6InByb3BpZXRhcmlvIiwiZm90byI6Ii5cLy4uXC9mb3Rvc1wvcHJvcEBwcm9wLmNvbS5qcGcifSwiYWx1bW5vIjoiRGFuaWxvIFZ1a29zaWNoIiwiZG5pX2FsdW1ubyI6IjQzMDM0OTczIn0.7wH3otHK90ORZ14byofvRks4mcrnh8kG_xxTkbF0PmM"
+            }
+        }
+    ],
+    "ref": "JVxk0KN_xAQQYPQJbWhAhBgNRWQxduIh5CsiFDKPWns7aA3RzuUd6I3ETL7EbfPmMTk8H7YIxh-7V_gpAZiMvQ"
+}
